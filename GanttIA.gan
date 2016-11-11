@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2016-10-12" view-index="0" gantt-divider-location="353" resource-divider-location="300" version="2.8.1" locale="es_ES">
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2016-10-10" view-index="0" gantt-divider-location="353" resource-divider-location="300" version="2.8.1" locale="es">
     <description/>
-    <view zooming-state="default:3" id="gantt-chart">
+    <view zooming-state="default:4" id="gantt-chart">
         <field id="tpd3" name="Nombre" width="199" order="0"/>
         <field id="tpd4" name="Fecha de inicio" width="75" order="1"/>
         <field id="tpd5" name="Fecha de fin" width="75" order="2"/>
@@ -35,7 +35,9 @@
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
         </taskproperties>
         <task id="0" name="Tutoria" color="#66ff00" meeting="false" start="2016-10-20" duration="1" complete="1" expand="true"/>
-        <task id="2" name="Creación de arff" color="#8cb6ce" meeting="true" start="2016-10-25" duration="0" complete="0" expand="true"/>
+        <task id="3" name="Programa para generar arff" color="#8cb6ce" meeting="false" start="2016-11-01" duration="1" complete="1" expand="true"/>
+        <task id="4" name="Generacion arff" color="#8cb6ce" meeting="false" start="2016-11-04" duration="1" complete="1" expand="true"/>
+        <task id="8" name="Generacion de modelo y creacion del programa predictor" color="#8cb6ce" meeting="false" start="2016-11-04" duration="1" complete="0" expand="true"/>
     </tasks>
     <resources>
         <resource id="0" name="Jose Cara Moreno" function="Default:0" contacts="" phone=""/>
@@ -44,7 +46,14 @@
     </resources>
     <allocations>
         <allocation task-id="0" resource-id="0" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="3" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="4" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="8" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="0" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="4" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="8" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="4" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="8" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
     </allocations>
     <vacations/>
     <previous/>
