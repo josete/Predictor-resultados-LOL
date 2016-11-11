@@ -13,8 +13,9 @@ import java.io.ObjectOutputStream;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import weka.classifiers.Classifier;
-import weka.classifiers.trees.J48;
+import weka.classifiers.lazy.KStar;
 import weka.core.Instances;
+import weka.core.converters.ConverterUtils;
 
 /**
  *
@@ -23,19 +24,23 @@ import weka.core.Instances;
 public class Leer {
 
     public Leer() {
+
+    }
+
+    public void leerArchivoArff() {
         try {
             // create J48
-            Classifier cls = new J48();
+            Classifier cls = new KStar();
             // train
             Instances inst = new Instances(
                     new BufferedReader(
-                            new FileReader("./datos.arff")));
+                            new FileReader("../datos.arff")));
 
             inst.setClassIndex(inst.numAttributes() - 1);
             cls.buildClassifier(inst);
             // serialize model
             ObjectOutputStream oos = new ObjectOutputStream(
-                    new FileOutputStream("/some/where/j48.model"));
+                    new FileOutputStream("./KStar.model"));
             oos.writeObject(cls);
             oos.flush();
             oos.close();
@@ -44,6 +49,21 @@ public class Leer {
         } catch (Exception ex) {
             Logger.getLogger(Leer.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+
+    public String leerModelo() {
+        try {
+            String[] valoresAtributos = {"Origen", "Fnatic"};
+            Classifier clasificador = (Classifier) weka.core.SerializationHelper.read("./KStar.model");
+            ConverterUtils.DataSource source = new ConverterUtils.DataSource("../test.arff");
+            Instances data = source.getDataSet();
+            data.setClassIndex(5);
+            System.out.println(data.instance(0));
+            return valoresAtributos[(int) clasificador.classifyInstance(data.instance(0))];
+        } catch (Exception ex) {
+            Logger.getLogger(Leer.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
     }
 
 }

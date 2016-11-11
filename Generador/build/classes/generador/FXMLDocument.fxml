@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="385.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="generador.FXMLDocumentController">
+   <children>
+      <ComboBox fx:id="equipo1" layoutX="14.0" layoutY="25.0" prefWidth="150.0" promptText="Equipo 1" />
+      <ComboBox fx:id="equipo2" layoutX="221.0" layoutY="25.0" prefWidth="150.0" promptText="Equipo 2" />
+      <ComboBox fx:id="ganador" layoutX="118.0" layoutY="88.0" prefWidth="150.0" promptText="Ganador" />
+      <Button layoutX="167.0" layoutY="146.0" mnemonicParsing="false" onAction="#anadir" text="Crear" />
+      <Button layoutX="242.0" layoutY="146.0" mnemonicParsing="false" onAction="#guardar" text="Guardar" />
+   </children>
+</AnchorPane>

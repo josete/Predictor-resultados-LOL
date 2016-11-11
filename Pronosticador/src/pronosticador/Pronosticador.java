@@ -5,6 +5,9 @@
  */
 package pronosticador;
 
+import LeerArchivo.Leer;
+import weka.classifiers.Classifier;
+
 /**
  *
  * @author Portatil-pc
@@ -16,6 +19,8 @@ public class Pronosticador {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Leer l = new Leer();
+        System.out.println(l.leerModelo());
     }
-    
+
 }
