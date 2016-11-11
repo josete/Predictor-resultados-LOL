@@ -36,7 +36,7 @@
         </taskproperties>
         <task id="0" name="Tutoria" color="#66ff00" meeting="false" start="2016-10-20" duration="1" complete="1" expand="true"/>
         <task id="3" name="Programa para generar arff" color="#8cb6ce" meeting="false" start="2016-11-01" duration="1" complete="1" expand="true"/>
-        <task id="4" name="Generacion arff" color="#8cb6ce" meeting="false" start="2016-11-04" duration="1" complete="1" expand="true"/>
+        <task id="4" name="Generacion arff y analisis" color="#8cb6ce" meeting="false" start="2016-11-04" duration="1" complete="1" expand="true"/>
         <task id="8" name="Generacion de modelo y creacion del programa predictor" color="#8cb6ce" meeting="false" start="2016-11-04" duration="1" complete="0" expand="true"/>
     </tasks>
     <resources>
