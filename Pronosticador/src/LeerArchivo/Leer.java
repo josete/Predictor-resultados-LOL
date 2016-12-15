@@ -53,9 +53,9 @@ public class Leer {
 
     public String leerModelo() {
         try {
-            String[] valoresAtributos = {"Origen", "Fnatic"};
+            String[] valoresAtributos = {"0", "1"};
             Classifier clasificador = (Classifier) weka.core.SerializationHelper.read("./KStar.model");
-            ConverterUtils.DataSource source = new ConverterUtils.DataSource("../test.arff");
+            ConverterUtils.DataSource source = new ConverterUtils.DataSource("./test.arff");
             Instances data = source.getDataSet();
             data.setClassIndex(5);
             System.out.println(data.instance(0));
